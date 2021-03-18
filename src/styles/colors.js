@@ -3,11 +3,13 @@ export const lightTheme = {
     grey_1: "#ebebeb",
     grey_2: "#b1b1b1",
     grey_3: "#636564",
-    black: "#1e1e24",
+    black: "#1e1e24", // 30,30,36
 
     primary: "#F0B45B",
 
     secondary: "#e63946",
+
+    tertiary: "#211B08", // brown 33, 27, 8
 };
 export const darkTheme = {
     white: "#fff",
@@ -19,4 +21,6 @@ export const darkTheme = {
     primary: "#F0B45B", //240, 180, 91
 
     secondary: "#e63946",
+
+    tertiary: "#211B08", // brown 33, 27, 8
 };

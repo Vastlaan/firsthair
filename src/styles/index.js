@@ -2,6 +2,7 @@ import respond from "./respond";
 import { lightTheme } from "./colors";
 import { fonts } from "./fonts";
 import { Header, FlexRow, FlexCol } from "./containers";
+import { Photo } from "./components";
 import { Header3, TextItalic, Text, Brand, BrandSub } from "./typography";
 import { ButtonPrimary, ButtonSecondary } from "./buttons";
 import { Line } from "./decorations";
@@ -14,6 +15,8 @@ export {
     Header,
     FlexCol,
     FlexRow,
+    // components
+    Photo,
     // typography
     Header3,
     TextItalic,

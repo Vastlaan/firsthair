@@ -1,5 +1,6 @@
 import Header from "./header";
 import Intersection from "../intersection";
+import SmallGallery from "./small_gallery";
 
 export default function LandingComponent() {
     return (
@@ -13,6 +14,7 @@ export default function LandingComponent() {
                     Zoals altijd, lopen enkele kapseltrends over van eind vorig jaar en zien we die kapsels meer en meer opkomen.
                 `}
             />
+            <SmallGallery />
         </>
     );
 }

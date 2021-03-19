@@ -9,7 +9,7 @@ export const lightTheme = {
 
     secondary: "#e63946",
 
-    tertiary: "#211B08", // brown 33, 27, 8
+    tertiary: "#483936", // brown 33, 27, 8
 };
 export const darkTheme = {
     white: "#fff",
@@ -22,5 +22,5 @@ export const darkTheme = {
 
     secondary: "#e63946",
 
-    tertiary: "#211B08", // brown 33, 27, 8
+    tertiary: "#483936", // brown 33, 27, 8
 };

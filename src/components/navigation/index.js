@@ -20,4 +20,5 @@ const Navigation = styled.nav`
     background-color: rgba(30, 30, 36, 0.7);
     display: flex;
     align-items: center;
+    z-index: 99;
 `;

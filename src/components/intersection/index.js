@@ -11,7 +11,7 @@ import {
 
 function IntersectionComponent({ category, title, body, link, theme }) {
     return (
-        <FlexCol margin="6.7rem auto">
+        <FlexCol margin="9.7rem auto">
             <TextItalic color={theme.secondary}>{category}</TextItalic>
             <Header3 color={theme.black}>{title}</Header3>
             <Line />

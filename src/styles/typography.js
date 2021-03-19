@@ -6,7 +6,7 @@ import { fonts } from "./fonts";
 export const Header3 = styled.h3`
     font-size: 4.7rem;
     font-weight: 300;
-    color: ${(p) => p.theme.grey_1};
+    color: ${(p) => (p.color ? p.color : p.theme.grey_1)};
     line-height: 1.3;
     font-family: ${fonts.para};
     text-align: center;
@@ -19,7 +19,7 @@ export const Text = styled.p`
     font-size: 1.9rem;
     text-align: center;
     max-width: 45rem;
-    color: ${(p) => p.theme.grey_2};
+    color: ${(p) => (p.color ? p.color : p.theme.grey_2)};
 `;
 
 export const TextItalic = styled.p`
@@ -27,7 +27,7 @@ export const TextItalic = styled.p`
     font-style: italic;
     font-weight: 300;
     letter-spacing: 0.2rem;
-    color: ${(p) => p.theme.primary};
+    color: ${(p) => (p.color ? p.color : p.theme.primary)};
 `;
 
 // brand name logo

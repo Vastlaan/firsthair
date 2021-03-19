@@ -4,6 +4,7 @@ import { fonts } from "./fonts";
 import { Header, FlexRow, FlexCol } from "./containers";
 import { Header3, TextItalic, Text, Brand, BrandSub } from "./typography";
 import { ButtonPrimary, ButtonSecondary } from "./buttons";
+import { Line } from "./decorations";
 
 export {
     respond,
@@ -22,4 +23,6 @@ export {
     // buttons
     ButtonPrimary,
     ButtonSecondary,
+    //decorations
+    Line,
 };

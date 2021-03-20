@@ -5,7 +5,7 @@ export const lightTheme = {
     grey_3: "#636564",
     black: "#1e1e24", // 30,30,36
 
-    primary: "#F0B45B",
+    primary: "#F0B45B", // 	240,180,91
 
     secondary: "#e63946",
 

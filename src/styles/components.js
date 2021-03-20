@@ -27,5 +27,6 @@ export const Photo = styled.div`
         font-size: 1.6rem;
         background-color: ${(p) => p.theme.tertiary};
         color: ${(p) => p.theme.white};
+        box-shadow: 0.3rem 0.2rem 0.5rem rgba(240, 180, 91, 0.6);
     }
 `;

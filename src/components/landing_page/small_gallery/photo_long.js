@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { Photo } from "../../../styles";
+import { Photo, respond } from "../../../styles";
 
 export default function PhotoLongComponent() {
     return (
-        <PhotoLong>
+        <PhotoLong desc="Salonklassieker Balayage">
             <img
                 src="./img/small_gallery_long_1.jpg"
                 alt="balayage kapsel purmerend"
@@ -17,7 +17,6 @@ const PhotoLong = styled(Photo)`
     grid-row: 1/3;
 
     img {
-        width: 100%;
-        height: 53rem;
+        ${() => respond("m", "height: 53rem;")}
     }
 `;

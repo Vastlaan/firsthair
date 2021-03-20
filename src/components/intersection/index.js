@@ -18,7 +18,9 @@ function IntersectionComponent({ category, title, body, link, theme }) {
             <Text color={theme.grey_3}>{body}</Text>
             {link && (
                 <Link href={link}>
-                    <ButtonPrimary>Lees meer</ButtonPrimary>
+                    <ButtonPrimary margin="1.4rem auto">
+                        Lees meer
+                    </ButtonPrimary>
                 </Link>
             )}
         </FlexCol>

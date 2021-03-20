@@ -3,7 +3,24 @@ import { fonts } from "./fonts";
 
 // Headers
 
+export const Header1 = styled.h3`
+    margin: ${(p) => (p.margin ? p.margin : "0")};
+    font-size: 6.7rem;
+    font-weight: 300;
+    color: ${(p) => (p.color ? p.color : p.theme.grey_1)};
+    line-height: 1.3;
+    text-transform: uppercase;
+    text-align: center;
+    max-width: 95rem;
+    letter-spacing: 0.2rem;
+
+    span {
+        color: ${(p) => (p.color2 ? p.color2 : p.theme.primary)};
+    }
+`;
+
 export const Header3 = styled.h3`
+    margin: ${(p) => (p.margin ? p.margin : "0")};
     font-size: 4.7rem;
     font-weight: 300;
     color: ${(p) => (p.color ? p.color : p.theme.grey_1)};
@@ -16,6 +33,7 @@ export const Header3 = styled.h3`
 // Paragraphs
 
 export const Text = styled.p`
+    margin: ${(p) => (p.margin ? p.margin : "0")};
     font-size: 1.9rem;
     text-align: center;
     max-width: 45rem;
@@ -23,6 +41,7 @@ export const Text = styled.p`
 `;
 
 export const TextItalic = styled.p`
+    margin: ${(p) => (p.margin ? p.margin : "0")};
     font-size: 2.2rem;
     font-style: italic;
     font-weight: 300;

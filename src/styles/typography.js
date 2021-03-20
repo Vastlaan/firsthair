@@ -5,7 +5,7 @@ import { fonts } from "./fonts";
 
 export const Header1 = styled.h3`
     margin: ${(p) => (p.margin ? p.margin : "0")};
-    font-size: 6.7rem;
+    font-size: 5.7rem;
     font-weight: 300;
     color: ${(p) => (p.color ? p.color : p.theme.grey_1)};
     line-height: 1.3;
@@ -36,7 +36,7 @@ export const Text = styled.p`
     margin: ${(p) => (p.margin ? p.margin : "0")};
     font-size: 1.9rem;
     text-align: center;
-    max-width: 45rem;
+    max-width: ${(p) => (p.wide ? "65rem" : "45rem")};
     color: ${(p) => (p.color ? p.color : p.theme.grey_2)};
 `;
 

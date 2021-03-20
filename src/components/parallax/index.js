@@ -12,7 +12,9 @@ export default function ParallaxBackground({ title, body }) {
                         i === 1 ? <span>{word} </span> : word + " "
                     )}
             </Header1>
-            <Text align="center">{body}</Text>
+            <Text wide align="center">
+                {body}
+            </Text>
         </Container>
     );
 }
@@ -23,8 +25,8 @@ const Container = styled.div`
     height: 48rem;
     background-image: linear-gradient(
             to bottom,
-            rgba(33, 27, 8, 0.8),
-            rgba(33, 27, 8, 0.8)
+            rgba(33, 27, 8, 0.6),
+            rgba(33, 27, 8, 0.6)
         ),
         url(${(p) => (p.url ? p.url : "./img/landing-header-background-2.jpg")});
     background-position: center;

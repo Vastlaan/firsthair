@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { respond } from "../../../styles";
+import { respond, ContainerNarrow } from "../../../styles";
 import PhotoLong from "./photo_long";
 import PhotoWide1 from "./photo_wide_1";
 import PhotoWide2 from "./photo_wide_2";
@@ -24,10 +24,6 @@ export default function SmallGalleryComponent() {
     );
 }
 
-const ContainerNarrow = styled.section`
-    max-width: 992px;
-    margin: 0 auto;
-`;
 const Grid = styled.div`
     margin: 2.7rem;
     display: flex;

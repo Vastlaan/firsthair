@@ -1,6 +1,12 @@
 import styled from "styled-components";
 import respond from "./respond";
 
+export const ContainerNarrow = styled.section`
+    max-width: 992px;
+    margin: 0 auto;
+    padding: 1.4rem;
+`;
+
 export const Header = styled.header`
     padding: 2.7rem;
     padding-top: 4.7rem;

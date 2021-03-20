@@ -1,7 +1,7 @@
 import respond from "./respond";
 import { lightTheme } from "./colors";
 import { fonts } from "./fonts";
-import { Header, FlexRow, FlexCol } from "./containers";
+import { ContainerNarrow, Header, FlexRow, FlexCol } from "./containers";
 import { Photo } from "./components";
 import {
     Header3,
@@ -19,6 +19,7 @@ export {
     lightTheme,
     fonts,
     // containers
+    ContainerNarrow,
     Header,
     FlexCol,
     FlexRow,

@@ -7,8 +7,9 @@ export const Photo = styled.div`
     object-position: center;
     border: 3px solid ${(p) => p.theme.tertiary};
     position: relative;
+    box-shadow: 0 0 1rem ${(p) => p.theme.tertiary};
 
-    ${() => respond("m", "margin-bottom: 0")}
+    ${() => respond("m", "margin-bottom: 0;")}
 
     img {
         display: block;

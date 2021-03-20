@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import respond from "./respond";
 
 export const Header = styled.header`
     padding: 2.7rem;
-    padding-top: 10rem;
+    padding-top: 4.7rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,6 +19,8 @@ export const Header = styled.header`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    ${() => respond("m", `padding-top: 10rem;`)}
 `;
 
 export const FlexCol = styled.div`

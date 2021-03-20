@@ -47,8 +47,8 @@ export default function MainComponent() {
 
 const Main = styled(FlexCol)`
     margin: 4.7rem auto;
-    min-height: 50vh;
-    max-height: 50vh;
+    min-height: 28rem;
+    max-height: 28rem;
 `;
 
 const headerData = {

@@ -1,11 +1,25 @@
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 import styled from "styled-components";
 import Link from "next/link";
-import { fonts } from "../../../styles";
+import { respond, fonts } from "../../../styles";
 import { IoLocationOutline, IoCallOutline } from "react-icons/io5";
 
-export default function LinksComponent() {
+export default function LinksComponent({ displayMenu, isMobile }) {
+    const list = useRef();
+
+    useEffect(() => {
+        displayMenu
+            ? gsap.to(list.current, { y: "100%", duration: 0.3 })
+            : gsap.to(list.current, {
+                  y: "0",
+
+                  duration: 0.3,
+              });
+    }, [displayMenu]);
+
     return (
-        <LinksList>
+        <LinksList ref={list}>
             <Link href="/">
                 <LinkItem>Diensten</LinkItem>
             </Link>
@@ -37,13 +51,35 @@ export default function LinksComponent() {
 const LinksList = styled.ul`
     list-style: none;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    z-index: -1;
+    padding: 2.7rem;
+    padding-top: 10rem;
+    background-color: ${(p) => p.theme.tertiary};
+
+    ${() =>
+        respond(
+            "m",
+            `
+                position: static;
+                padding: 0;
+                background-color: transparent;
+                flex-direction: row;
+                align-items: center;
+            `
+        )}
 `;
 const LinkItem = styled.li`
     font-size: 1.9rem;
     font-family: ${fonts.heading};
     color: ${(p) => p.theme.white};
-    margin-right: 1.4rem;
+    margin: 1.4rem 0 1.4rem 0;
     font-weight: 300;
     transition: all 0.3s;
     cursor: pointer;
@@ -51,12 +87,30 @@ const LinkItem = styled.li`
     &:hover {
         color: ${(p) => p.theme.primary};
     }
+
+    ${() =>
+        respond(
+            "m",
+            `
+                margin: 0;
+                margin-right: 1.4rem;
+            `
+        )}
 `;
 
 const Address = styled.li`
     display: flex;
     align-items: center;
-    margin-right: 1.4rem;
+    margin: 1.4rem 0 1.4rem 0;
+
+    ${() =>
+        respond(
+            "m",
+            `
+                margin: 0;
+                margin-right: 1.4rem;
+            `
+        )}
 
     svg {
         color: ${(p) => p.theme.primary};
@@ -82,4 +136,8 @@ const Afspraak = styled.button`
     font-weight: 300;
     text-transform: uppercase;
     box-shadow: 0 0 1rem ${(p) => p.theme.primary};
+
+    margin: 1.4rem 0 1.4rem 0;
+
+    ${() => respond("m", ` margin: 0; `)}
 `;

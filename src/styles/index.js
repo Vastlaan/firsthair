@@ -5,6 +5,7 @@ import { ContainerNarrow, Header, FlexRow, FlexCol } from "./containers";
 import { Photo } from "./components";
 import {
     Header3,
+    Header4,
     Header1,
     TextItalic,
     Text,
@@ -32,6 +33,7 @@ export {
     // typography
     Header1,
     Header3,
+    Header4,
     TextItalic,
     Text,
     Brand,

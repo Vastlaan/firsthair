@@ -10,7 +10,7 @@ export const Header1 = styled.h3`
     color: ${(p) => (p.color ? p.color : p.theme.grey_1)};
     line-height: 1.3;
     text-transform: uppercase;
-    text-align: center;
+    text-align: ${(p) => (p.align ? p.align : "center")};
     max-width: 95rem;
     letter-spacing: 0.2rem;
 
@@ -26,8 +26,30 @@ export const Header3 = styled.h3`
     color: ${(p) => (p.color ? p.color : p.theme.grey_1)};
     line-height: 1.3;
     font-family: ${fonts.para};
-    text-align: center;
+    text-align: ${(p) => (p.align ? p.align : "center")};
     max-width: 65rem;
+`;
+
+export const Header4 = styled.h4`
+    margin: ${(p) => (p.margin ? p.margin : "0")};
+    font-size: 2.7rem;
+    font-weight: 300;
+    color: ${(p) => (p.color ? p.color : p.theme.grey_1)};
+    line-height: 1.3;
+    letter-spacing: 0.15rem;
+    text-align: ${(p) => (p.align ? p.align : "center")};
+    max-width: 45rem;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 10%;
+        left: -1.4rem;
+        height: 2.7rem;
+        width: 0.3rem;
+        background-color: ${(p) => p.theme.primary};
+    }
 `;
 
 // Paragraphs
@@ -35,7 +57,7 @@ export const Header3 = styled.h3`
 export const Text = styled.p`
     margin: ${(p) => (p.margin ? p.margin : "0")};
     font-size: 1.9rem;
-    text-align: center;
+    text-align: ${(p) => (p.align ? p.align : "center")};
     max-width: ${(p) => (p.wide ? "65rem" : "45rem")};
     color: ${(p) => (p.color ? p.color : p.theme.grey_2)};
 `;

@@ -3,6 +3,7 @@ import Intersection from "../intersection";
 import Parallax from "../parallax";
 import SmallGallery from "./small_gallery";
 import Prices from "../prices";
+import Story from "../story";
 
 export default function LandingComponent() {
     return (
@@ -37,6 +38,8 @@ export default function LandingComponent() {
             />
 
             <Prices />
+
+            <Story />
         </>
     );
 }

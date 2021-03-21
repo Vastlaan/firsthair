@@ -1,13 +1,14 @@
 import styled from "styled-components";
 import respond from "./respond";
+import { fonts } from "./fonts";
 
 export const Photo = styled.div`
     margin-bottom: 1.4rem;
     overflow: hidden;
     object-position: center;
-    border: 3px solid ${(p) => p.theme.tertiary};
+    border: 3px solid ${(p) => p.theme.black};
     position: relative;
-    box-shadow: 0 0 1rem ${(p) => p.theme.tertiary};
+    box-shadow: 0 0 1rem ${(p) => p.theme.black};
 
     ${() => respond("m", "margin-bottom: 0;")}
 
@@ -25,8 +26,11 @@ export const Photo = styled.div`
         left: 0;
         padding: 0.9rem;
         font-size: 1.6rem;
-        background-color: ${(p) => p.theme.tertiary};
-        color: ${(p) => p.theme.white};
-        box-shadow: 0.3rem 0.2rem 0.5rem rgba(240, 180, 91, 0.6);
+        font-weight: 300;
+        text-transform: lowercase;
+        font-family: ${fonts.heading};
+        background-color: ${(p) => p.theme.black};
+        color: ${(p) => p.theme.primary};
+        box-shadow: 0.3rem 0.2rem 0.5rem rgba(0, 0, 0, 0.6);
     }
 `;

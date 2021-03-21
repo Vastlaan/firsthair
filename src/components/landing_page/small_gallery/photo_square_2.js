@@ -3,7 +3,7 @@ import { Photo } from "../../../styles";
 
 export default function PhotoWide1Component() {
     return (
-        <PhotoSquare2 desc="Je haar alleen aan de beste professionele handen">
+        <PhotoSquare2 desc="met passie voor de vak">
             <img
                 src="./img/small_gallery_square_2.jpg"
                 alt="dames knippen en kleuren in Purmerend"

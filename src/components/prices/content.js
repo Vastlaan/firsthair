@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { CATEGORIES } from "../../data/categories";
+import { respond } from "../../styles";
 
 export default function ContentComponent({ category }) {
     return (
@@ -24,6 +25,28 @@ const Content = styled.div`
     display: flex;
     flex-direction: column;
     padding: 0 1.4rem;
+    min-height: 35rem;
+
+    ${(p) =>
+        respond(
+            "m",
+            `
+            max-height: 35rem;
+            overflow-y: auto;
+            &::-webkit-scrollbar {
+                display: block;
+                width: 1rem;
+                overflow: auto;
+            }
+            &::-webkit-scrollbar-track {
+                background-color: ${p.theme.grey_1};
+            }
+            &::-webkit-scrollbar-thumb {
+                width: 0.7rem;
+                background-color: ${p.theme.grey_3};
+            }
+            `
+        )}
 `;
 const Item = styled.div`
     padding: 0 0 1.4rem 0;

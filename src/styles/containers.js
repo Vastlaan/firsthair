@@ -32,14 +32,14 @@ export const Header = styled.header`
 export const FlexCol = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: ${(p) => (p.aling ? p.align : "center")};
+    align-items: ${(p) => (p.align ? p.align : "center")};
     justify-content: ${(p) => (p.justify ? p.justify : "center")};
     margin: ${(p) => (p.margin ? p.margin : "0")};
     height: ${(p) => (p.fixedHeight ? p.fixedHeight : "auto")};
 `;
 export const FlexRow = styled.div`
     display: flex;
-    align-items: ${(p) => (p.aling ? p.align : "center")};
+    align-items: ${(p) => (p.align ? p.align : "center")};
     justify-content: ${(p) => (p.justify ? p.justify : "center")};
     margin: ${(p) => (p.margin ? p.margin : "0")};
 `;

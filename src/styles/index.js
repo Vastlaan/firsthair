@@ -11,7 +11,11 @@ import {
     Brand,
     BrandSub,
 } from "./typography";
-import { ButtonPrimary, ButtonSecondary } from "./buttons";
+import {
+    ButtonPrimary,
+    ButtonSecondary,
+    ButtonSecondaryReverse,
+} from "./buttons";
 import { Line } from "./decorations";
 
 export {
@@ -35,6 +39,7 @@ export {
     // buttons
     ButtonPrimary,
     ButtonSecondary,
+    ButtonSecondaryReverse,
     //decorations
     Line,
 };

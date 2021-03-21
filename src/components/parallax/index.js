@@ -9,7 +9,7 @@ export default function ParallaxBackground({ title, body }) {
                 {title
                     .split(" ")
                     .map((word, i) =>
-                        i === 1 ? <span>{word} </span> : word + " "
+                        i === 1 ? <span key={i}>{word} </span> : word + " "
                     )}
             </Header1>
             <Text wide align="center">

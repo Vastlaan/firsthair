@@ -10,6 +10,5 @@ export const ABOUT = {
 export const CONTACT = {
     category: "contact",
     title: "Neem Contact met Ons op",
-    body: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Asperiores, temporibus?`,
+    body: `Heb je een vraag voor ons? Neem gerust contact met een van onze klantenservice medewerkers op via de onderstaande contactgegevens.`,
 };

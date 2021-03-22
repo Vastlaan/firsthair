@@ -4,6 +4,7 @@ import Parallax from "../parallax";
 import SmallGallery from "./small_gallery";
 import Prices from "../prices";
 import Story from "../story";
+import OpeningHours from "../opening_hours";
 
 export default function LandingComponent() {
     return (
@@ -34,12 +35,15 @@ export default function LandingComponent() {
             <Parallax
                 title={`Weer trots zijn op jouw haar`}
                 body={`Een ruimte waarin je jezelf kunt zijn en comfortabel voelt.
-                Een salon waar jij de behandeling krijgt die aansluit op je persoonlijke wensen en de expertise van onze topkappers`}
+                Een salon waar jij de behandeling krijgt die aansluit op je persoonlijke wensen en de expertise van onze topkappers. 
+                Wij bieden 100% garantie op mooi haar en onze producten. Zo heb jij altijd de zekerheid van mooi haar.`}
             />
 
             <Prices />
 
             <Story />
+
+            <OpeningHours />
         </>
     );
 }

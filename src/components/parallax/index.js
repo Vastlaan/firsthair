@@ -19,7 +19,7 @@ export default function ParallaxBackground({ title, body }) {
     );
 }
 
-const Container = styled.div`
+const Container = styled.section`
     width: 100%;
     padding: 1.4rem;
     height: 48rem;

@@ -1,7 +1,13 @@
 import respond from "./respond";
 import { lightTheme } from "./colors";
 import { fonts } from "./fonts";
-import { ContainerNarrow, Header, FlexRow, FlexCol } from "./containers";
+import {
+    ContainerNarrow,
+    Header,
+    FlexRow,
+    FlexCol,
+    BilboardContainer,
+} from "./containers";
 import { Photo, ImageStory } from "./components";
 import {
     Header3,
@@ -11,6 +17,7 @@ import {
     Text,
     Brand,
     BrandSub,
+    BigText,
 } from "./typography";
 import {
     ButtonPrimary,
@@ -28,6 +35,7 @@ export {
     Header,
     FlexCol,
     FlexRow,
+    BilboardContainer,
     // components
     Photo,
     ImageStory,
@@ -39,6 +47,7 @@ export {
     Text,
     Brand,
     BrandSub,
+    BigText,
     // buttons
     ButtonPrimary,
     ButtonSecondary,

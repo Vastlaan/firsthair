@@ -62,6 +62,14 @@ export const Text = styled.p`
     color: ${(p) => (p.color ? p.color : p.theme.grey_2)};
 `;
 
+export const BigText = styled.p`
+    margin: ${(p) => (p.margin ? p.margin : "0")};
+    font-size: 2.7rem;
+    text-align: ${(p) => (p.align ? p.align : "center")};
+    max-width: ${(p) => (p.wide ? "85rem" : "45rem")};
+    color: ${(p) => (p.color ? p.color : p.theme.grey_2)};
+`;
+
 export const TextItalic = styled.p`
     margin: ${(p) => (p.margin ? p.margin : "0")};
     font-size: 2.2rem;

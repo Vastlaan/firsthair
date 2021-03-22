@@ -1,10 +1,9 @@
 import React from "react";
-import styled from "styled-components";
-import { Header1, Line, Text } from "../../styles";
+import { Header1, BilboardContainer, Text } from "../../styles";
 
 export default function ParallaxBackground({ title, body }) {
     return (
-        <Container>
+        <BilboardContainer>
             <Header1 margin="0 0 2.7rem 0">
                 {title
                     .split(" ")
@@ -15,26 +14,6 @@ export default function ParallaxBackground({ title, body }) {
             <Text wide align="center">
                 {body}
             </Text>
-        </Container>
+        </BilboardContainer>
     );
 }
-
-const Container = styled.section`
-    width: 100%;
-    padding: 1.4rem;
-    height: 48rem;
-    background-image: linear-gradient(
-            to bottom,
-            rgba(33, 27, 8, 0.6),
-            rgba(33, 27, 8, 0.6)
-        ),
-        url(${(p) => (p.url ? p.url : "./img/landing-header-background-2.jpg")});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-`;

@@ -5,6 +5,7 @@ import SmallGallery from "./small_gallery";
 import Prices from "../prices";
 import Story from "../story";
 import OpeningHours from "../opening_hours";
+import Reviews from "../reviews";
 
 export default function LandingComponent() {
     return (
@@ -44,6 +45,8 @@ export default function LandingComponent() {
             <Story />
 
             <OpeningHours />
+
+            <Reviews />
         </>
     );
 }

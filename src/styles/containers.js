@@ -43,3 +43,22 @@ export const FlexRow = styled.div`
     justify-content: ${(p) => (p.justify ? p.justify : "center")};
     margin: ${(p) => (p.margin ? p.margin : "0")};
 `;
+export const BilboardContainer = styled.section`
+    width: 100%;
+    padding: 1.4rem;
+    height: 48rem;
+    background-image: linear-gradient(
+            to bottom,
+            rgba(33, 27, 8, 0.6),
+            rgba(33, 27, 8, 0.6)
+        ),
+        url(${(p) => (p.url ? p.url : "./img/landing-header-background-2.jpg")});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`;

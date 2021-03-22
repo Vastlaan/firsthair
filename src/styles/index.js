@@ -2,7 +2,7 @@ import respond from "./respond";
 import { lightTheme } from "./colors";
 import { fonts } from "./fonts";
 import { ContainerNarrow, Header, FlexRow, FlexCol } from "./containers";
-import { Photo } from "./components";
+import { Photo, ImageStory } from "./components";
 import {
     Header3,
     Header4,
@@ -30,6 +30,7 @@ export {
     FlexRow,
     // components
     Photo,
+    ImageStory,
     // typography
     Header1,
     Header3,

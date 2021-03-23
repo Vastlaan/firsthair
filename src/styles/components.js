@@ -72,3 +72,31 @@ export const ImageStory = styled.div`
         z-index: 1;
     }
 `;
+
+export const CustomLink = styled.div`
+    display: flex;
+    align-items: center;
+    margin: 1.4rem 0;
+
+    ${() =>
+        respond(
+            "m",
+            `
+                margin: 0;
+                margin-right: 1.4rem;
+            `
+        )}
+
+    svg {
+        color: ${(p) => p.theme.primary};
+        font-size: 2.7rem;
+        margin-right: 0.9rem;
+    }
+    p {
+        font-family: ${fonts.heading};
+        font-size: 1.9rem;
+        font-weight: 300;
+        line-height: 1.3;
+        color: ${(p) => p.theme.grey_2};
+    }
+`;

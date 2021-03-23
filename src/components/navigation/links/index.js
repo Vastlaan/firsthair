@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import styled from "styled-components";
 import Link from "next/link";
-import { respond, fonts } from "../../../styles";
+import { respond, fonts, CustomLink } from "../../../styles";
 import { IoLocationOutline, IoCallOutline } from "react-icons/io5";
 
 export default function LinksComponent({ displayMenu, isMobile }) {
@@ -30,16 +30,16 @@ export default function LinksComponent({ displayMenu, isMobile }) {
                 <LinkItem>Contact</LinkItem>
             </Link>
             <a href="https://www.google.com/maps/place/First+Hair/@52.5095632,4.944381,15z/data=!4m5!3m4!1s0x0:0x963c1c3b6fc280b3!8m2!3d52.5095632!4d4.944381">
-                <Address>
+                <CustomLink>
                     <IoLocationOutline />
                     <p>Westerstraat 45, 1441 AR Purmerend</p>
-                </Address>
+                </CustomLink>
             </a>
             <a href="tel:0299450325">
-                <Address>
+                <CustomLink>
                     <IoCallOutline />
                     <p>0299 450 325</p>
-                </Address>
+                </CustomLink>
             </a>
             <Link href="/">
                 <Afspraak>Afspraak</Afspraak>
@@ -96,34 +96,6 @@ const LinkItem = styled.li`
                 margin-right: 1.4rem;
             `
         )}
-`;
-
-const Address = styled.li`
-    display: flex;
-    align-items: center;
-    margin: 1.4rem 0 1.4rem 0;
-
-    ${() =>
-        respond(
-            "m",
-            `
-                margin: 0;
-                margin-right: 1.4rem;
-            `
-        )}
-
-    svg {
-        color: ${(p) => p.theme.primary};
-        font-size: 2.2rem;
-        margin-right: 0.9rem;
-    }
-    p {
-        font-family: ${fonts.heading};
-        font-size: 1.6rem;
-        font-weight: 300;
-        line-height: 1.3;
-        color: ${(p) => p.theme.grey_2};
-    }
 `;
 
 const Afspraak = styled.button`

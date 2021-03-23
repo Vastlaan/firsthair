@@ -19,7 +19,7 @@ export default function FooterComponent() {
 const Footer = styled.footer`
     display: flex;
     flex-direction: column;
-    aling-items: center;
+    align-items: center;
     justify-content: center;
     background-color: ${(p) => p.theme.black};
     padding: 2.7rem 1.4rem;

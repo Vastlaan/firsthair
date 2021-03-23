@@ -9,7 +9,7 @@ export const ContainerNarrow = styled.section`
 
 export const Header = styled.header`
     padding: 2.7rem;
-    padding-top: 4.7rem;
+    padding-top: 6.7rem;
     display: flex;
     flex-direction: column;
     justify-content: center;

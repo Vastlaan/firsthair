@@ -25,6 +25,7 @@ const Links = styled.ul`
     list-style: none;
     margin: 2.7rem auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     aling-itmes: center;
 `;

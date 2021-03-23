@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { Logo } from "../../../styles";
 
 export default function LogoComponent() {
     return (
@@ -7,13 +7,3 @@ export default function LogoComponent() {
         </Logo>
     );
 }
-const Logo = styled.div`
-    margin-right: auto;
-    display: flex;
-    align-items: center;
-
-    img {
-        width: 4.7rem;
-        height: 4.7rem;
-    }
-`;

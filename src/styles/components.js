@@ -2,6 +2,17 @@ import styled from "styled-components";
 import respond from "./respond";
 import { fonts } from "./fonts";
 
+export const Logo = styled.div`
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+
+    img {
+        width: ${(p) => (p.dimensions ? p.dimensions : "4.7rem")};
+        height: ${(p) => (p.dimensions ? p.dimensions : "4.7rem")};
+    }
+`;
+
 export const Photo = styled.div`
     margin-bottom: 1.4rem;
     overflow: hidden;

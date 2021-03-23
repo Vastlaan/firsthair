@@ -15,7 +15,7 @@ export const Header = styled.header`
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 100vh;
+    min-height: ${(p) => (p.minHeight ? p.minHeight : "100vh")};
     background-image: linear-gradient(
             to bottom,
             rgba(0, 0, 0, 0.9),

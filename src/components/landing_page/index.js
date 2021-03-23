@@ -6,6 +6,9 @@ import Prices from "../prices";
 import Story from "../story";
 import OpeningHours from "../opening_hours";
 import Reviews from "../reviews";
+import { CORONA_INTERSECTION } from "../../data/intersections/corona";
+import { TRENDS_INTERSECTION } from "../../data/intersections/trends";
+import { PERSONAL_PARALLAX } from "../../data/parallax/personal";
 
 export default function LandingComponent() {
     return (
@@ -13,31 +16,23 @@ export default function LandingComponent() {
             <Header />
 
             <Intersection
-                category={`haartrends`}
-                title={`De Ultieme Inspiratie voor Kapsels`}
-                body={`
-                    Welke kapseltrends, haartrends en haarstijlen zullen er populair worden voor dames en heren in 2021?
-                    Zoals altijd, lopen enkele kapseltrends over van eind vorig jaar en zien we die kapsels meer en meer opkomen.
-                `}
+                category={TRENDS_INTERSECTION.category}
+                title={TRENDS_INTERSECTION.title}
+                body={TRENDS_INTERSECTION.body}
             />
 
             <SmallGallery />
 
             <Intersection
-                category={`corona maatregelen`}
-                title={`Extra Aandacht voor Goede Hygiëne`}
-                body={`
-                    Wij houden zich aan alle coronamaatregelen en werken volgens de adviezen van RIVM.
-                    Alleen wanneer iedereen zich aan de maatregelen houdt, zetten we samen een stap vooruit.
-                `}
-                link="/veiligheid"
+                category={CORONA_INTERSECTION.category}
+                title={CORONA_INTERSECTION.title}
+                body={CORONA_INTERSECTION.body}
+                link={CORONA_INTERSECTION.link}
             />
 
             <Parallax
-                title={`Weer trots zijn op jouw haar`}
-                body={`Een ruimte waarin je jezelf kunt zijn en comfortabel voelt.
-                Een salon waar jij de behandeling krijgt die aansluit op je persoonlijke wensen en de expertise van onze topkappers. 
-                Wij bieden 100% garantie op mooi haar en onze producten. Zo heb jij altijd de zekerheid van mooi haar.`}
+                title={PERSONAL_PARALLAX.title}
+                body={PERSONAL_PARALLAX.body}
             />
 
             <Prices />

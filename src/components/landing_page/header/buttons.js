@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import {
     FlexRow,
     ButtonSecondaryReverse,
@@ -5,12 +6,19 @@ import {
 } from "../../../styles";
 
 export default function ButtonsContainer() {
+    const router = useRouter();
+
     return (
         <FlexRow>
-            <ButtonSecondaryReverse margin="0 1.4rem 0 0">
+            <ButtonSecondaryReverse
+                onClick={() => router.push("/afspraak")}
+                margin="0 1.4rem 0 0"
+            >
                 Afspraak
             </ButtonSecondaryReverse>
-            <ButtonSecondary>Contact</ButtonSecondary>
+            <ButtonSecondary onClick={() => router.push("/contact")}>
+                Contact
+            </ButtonSecondary>
         </FlexRow>
     );
 }

@@ -45,7 +45,7 @@ export const FlexRow = styled.div`
 `;
 export const BilboardContainer = styled.section`
     width: 100%;
-    padding: 1.4rem;
+    padding: 3.3rem;
     height: 48rem;
     background-image: linear-gradient(
             to bottom,
@@ -61,4 +61,5 @@ export const BilboardContainer = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 `;

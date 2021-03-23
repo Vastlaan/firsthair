@@ -1,3 +1,4 @@
+// max 150 char text
 export const REVIEWS = [
     {
         id: 1,

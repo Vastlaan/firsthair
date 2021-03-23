@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { fonts } from "./fonts";
+import respond from "./respond";
 
 // Headers
 
 export const Header1 = styled.h3`
     margin: ${(p) => (p.margin ? p.margin : "0")};
-    font-size: 5.7rem;
+    font-size: 4.7rem;
     font-weight: 300;
     color: ${(p) => (p.color ? p.color : p.theme.grey_1)};
     line-height: 1.3;
@@ -13,6 +14,8 @@ export const Header1 = styled.h3`
     text-align: ${(p) => (p.align ? p.align : "center")};
     max-width: 95rem;
     letter-spacing: 0.2rem;
+
+    ${() => respond("s", "font-size: 5.7rem;")}
 
     span {
         color: ${(p) => (p.color2 ? p.color2 : p.theme.primary)};

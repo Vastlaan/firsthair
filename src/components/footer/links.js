@@ -5,16 +5,16 @@ import { fonts } from "../../styles";
 export default function LinksComponent() {
     return (
         <Links>
-            <Link href="afspraak">
+            <Link href="/afspraak">
                 <ListLink margin="1.4rem">Afspraak</ListLink>
             </Link>
-            <Link href="behandelingen">
+            <Link href="/behandelingen">
                 <ListLink margin="1.4rem">Behandelingen</ListLink>
             </Link>
-            <Link href="contact">
+            <Link href="/contact">
                 <ListLink margin="1.4rem">Contact</ListLink>
             </Link>
-            <Link href="cookies">
+            <Link href="/cookies">
                 <ListLink margin="1.4rem">Cookies</ListLink>
             </Link>
         </Links>

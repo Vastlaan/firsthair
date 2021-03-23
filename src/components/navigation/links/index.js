@@ -20,13 +20,13 @@ export default function LinksComponent({ displayMenu, isMobile }) {
 
     return (
         <LinksList ref={list}>
-            <Link href="/">
-                <LinkItem>Diensten</LinkItem>
+            <Link href="/behandelingen">
+                <LinkItem>Behandelingen</LinkItem>
             </Link>
-            <Link href="/">
+            <Link href="/galerij">
                 <LinkItem>Galerij</LinkItem>
             </Link>
-            <Link href="/">
+            <Link href="/contact">
                 <LinkItem>Contact</LinkItem>
             </Link>
             <a href="https://www.google.com/maps/place/First+Hair/@52.5095632,4.944381,15z/data=!4m5!3m4!1s0x0:0x963c1c3b6fc280b3!8m2!3d52.5095632!4d4.944381">
@@ -41,7 +41,7 @@ export default function LinksComponent({ displayMenu, isMobile }) {
                     <p>0299 450 325</p>
                 </CustomLink>
             </a>
-            <Link href="/">
+            <Link href="/afspaak">
                 <Afspraak>Afspraak</Afspraak>
             </Link>
         </LinksList>

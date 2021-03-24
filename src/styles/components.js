@@ -6,6 +6,7 @@ export const Logo = styled.div`
     margin-right: auto;
     display: flex;
     align-items: center;
+    cursor: pointer;
 
     img {
         width: ${(p) => (p.dimensions ? p.dimensions : "4.7rem")};

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { withTheme } from "styled-components";
 import {
-    FlexCol,
+    Section,
     Header3,
     Text,
     TextItalic,
@@ -11,7 +11,7 @@ import {
 
 function IntersectionComponent({ category, title, body, link, theme }) {
     return (
-        <FlexCol margin="9.7rem 1.4rem">
+        <Section margin="9.7rem 1.4rem">
             <TextItalic color={theme.secondary}>{category}</TextItalic>
             <Header3 color={theme.black}>{title}</Header3>
             <Line />
@@ -23,7 +23,7 @@ function IntersectionComponent({ category, title, body, link, theme }) {
                     </ButtonPrimary>
                 </Link>
             )}
-        </FlexCol>
+        </Section>
     );
 }
 

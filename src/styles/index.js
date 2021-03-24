@@ -3,6 +3,7 @@ import { lightTheme } from "./colors";
 import { fonts } from "./fonts";
 import {
     ContainerNarrow,
+    Section,
     Header,
     FlexRow,
     FlexCol,
@@ -32,6 +33,7 @@ export {
     fonts,
     // containers
     ContainerNarrow,
+    Section,
     Header,
     FlexCol,
     FlexRow,

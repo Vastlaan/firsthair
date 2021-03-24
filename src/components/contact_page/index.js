@@ -1,15 +1,19 @@
-import styled from "styled-components";
 import Header from "../header";
+import Details from "./details";
 import Openinghours from "../opening_hours";
+import Map from "./map";
+import { HEADER_CONTACT } from "../../data/headers";
 
 export default function ContactComponent() {
     return (
         <>
             <Header
-                title="Wij zijn je graag van dienst"
-                body="Heb je een vraag voor ons? Neem gerust contact met een van onze medewerkers op via de onderstaande contactgegevens."
-                url=""
+                title={HEADER_CONTACT.title}
+                body={HEADER_CONTACT.body}
+                url={HEADER_CONTACT.url}
             />
+            <Details />
+            <Map />
             <Openinghours />
         </>
     );

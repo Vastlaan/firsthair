@@ -29,6 +29,15 @@ export const Header = styled.header`
     ${() => respond("m", `padding-top: 10rem;`)}
 `;
 
+export const Section = styled.section`
+    display: flex;
+    flex-direction: column;
+    align-items: ${(p) => (p.align ? p.align : "center")};
+    justify-content: ${(p) => (p.justify ? p.justify : "center")};
+    margin: ${(p) => (p.margin ? p.margin : "0")};
+    height: ${(p) => (p.fixedHeight ? p.fixedHeight : "auto")};
+`;
+
 export const FlexCol = styled.div`
     display: flex;
     flex-direction: column;

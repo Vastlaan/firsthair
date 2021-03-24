@@ -6,10 +6,10 @@ import Prices from "../prices";
 import Story from "../story";
 import OpeningHours from "../opening_hours";
 import Reviews from "../reviews";
-import { CORONA_INTERSECTION } from "../../data/intersections/corona";
-import { TRENDS_INTERSECTION } from "../../data/intersections/trends";
-import { SUMMARY_INTERSECTION } from "../../data/intersections/summary";
-import { PERSONAL_PARALLAX } from "../../data/parallax/personal";
+import { CORONA_INTERSECTION } from "../../data/intersections";
+import { TRENDS_INTERSECTION } from "../../data/intersections";
+import { SUMMARY_INTERSECTION } from "../../data/intersections";
+import { PERSONAL_PARALLAX } from "../../data/parallax";
 
 export default function LandingComponent() {
     return (

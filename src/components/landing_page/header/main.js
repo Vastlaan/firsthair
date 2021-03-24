@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import gsap from "gsap";
 import { FlexCol, Header3, TextItalic, Text } from "../../../styles";
-import { HEADER_LANDING as data } from "../../../data/header_landing";
+import { HEADER_LANDING as data } from "../../../data/headers";
 
 export default function MainComponent() {
     const [iteration, setIteration] = useState(0);

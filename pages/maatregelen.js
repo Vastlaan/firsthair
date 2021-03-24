@@ -1,10 +1,10 @@
 import Layout from "../src/layout";
-import Contact from "../src/components/contact_page";
+import Maatregelen from "../src/components/maatregelen_page";
 
 export default function MaatregelenPage() {
     return (
         <Layout>
-            <Contact />
+            <Maatregelen />
         </Layout>
     );
 }

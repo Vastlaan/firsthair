@@ -23,8 +23,8 @@ export default function LinksComponent({ displayMenu, isMobile }) {
             <Link href="/behandelingen">
                 <LinkItem>Behandelingen</LinkItem>
             </Link>
-            <Link href="/galerij">
-                <LinkItem>Galerij</LinkItem>
+            <Link href="/afspraak">
+                <LinkItem>Afspraak</LinkItem>
             </Link>
             <Link href="/contact">
                 <LinkItem>Contact</LinkItem>

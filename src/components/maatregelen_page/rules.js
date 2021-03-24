@@ -1,5 +1,5 @@
-import styled, { withTheme } from "styled-components";
-import { Section, Header3, Line } from "../../styles";
+import { withTheme } from "styled-components";
+import { Section, Header3, Line, List } from "../../styles";
 import { RULES as data } from "../../data/rules";
 
 function RulesComponent({ theme }) {
@@ -20,17 +20,3 @@ function RulesComponent({ theme }) {
     );
 }
 export default withTheme(RulesComponent);
-
-const List = styled.ul`
-    margin: 2.7rem auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    li {
-        text-align: center;
-        font-size: 1.9rem;
-        color: ${(p) => p.theme.grey_3};
-        margin: 1.4rem 0;
-    }
-`;

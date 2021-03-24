@@ -9,7 +9,7 @@ import {
     FlexCol,
     BilboardContainer,
 } from "./containers";
-import { Photo, ImageStory, CustomLink, Logo } from "./components";
+import { List, Photo, ImageStory, CustomLink, Logo } from "./components";
 import {
     Header3,
     Header4,
@@ -40,6 +40,7 @@ export {
     BilboardContainer,
     // components
     Logo,
+    List,
     Photo,
     ImageStory,
     CustomLink,

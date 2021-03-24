@@ -14,6 +14,21 @@ export const Logo = styled.div`
     }
 `;
 
+export const List = styled.ul`
+    margin: 2.7rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    li {
+        text-align: center;
+        font-size: 1.9rem;
+        color: ${(p) => p.theme.grey_3};
+        margin: 1.4rem 0;
+        max-width: 65rem;
+    }
+`;
+
 export const Photo = styled.div`
     margin-bottom: 1.4rem;
     overflow: hidden;

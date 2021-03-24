@@ -1,0 +1,15 @@
+export const COOKIES = [
+    "Welke informatie verzamelen wij?",
+    "Als u ervoor kiest om met ons te communiceren (bijvoorbeeld via het webportaal, e-mail, telefoon, sms of sociale media), zullen we vastleggen dat u contact met ons hebt opgenomen en mogelijk de inhoud van uw communicatie bewaren, samen met uw contactgegevens en onze antwoorden.",
+    "Informatie over uw bezoeken aan en gebruik van het webportaal, zoals informatie over het apparaat en de browser die u gebruikt, uw IP-adres en locatie, uw identificatie voor adverteerders (IDFA), de datum en tijd van uw bezoek, de duur van uw bezoek, uw bronsite en uw interacties op het webportaal, inclusief de salons en behandelingen waarin u bent geïnteresseerd. Houd er rekening mee dat we deze informatie kunnen koppelen aan uw Treatwell-account. Raadpleeg het cookies-hoofdstuk van dit Privacybeleid voor meer informatie over de doeleinden waarvoor we deze informatie verzamelen en gebruiken.",
+    "Bescherming van uw persoonsgegevens",
+    "De overdracht van informatie via internet is niet altijd veilig. Hoewel we ons best zullen doen om uw Persoonsgegevens te beschermen, kunnen we de veiligheid van uw gegevens die naar ons webportaal worden verzonden niet garanderen. Iedere overdracht is op uw eigen risico. Zodra we uw Persoonsgegevens hebben ontvangen, passen we strikte procedures en beveiligingsfuncties toe met betrekking tot die gegevens.",
+    "Hoe gebruiken wij uw persoonsgegevens?",
+    "In het algemeen gebruiken we Persoonsgegevens om u de diensten en producten te bieden die u aanvraagt, de betaling te verwerken, klantenservice te verlenen, inhoud en advertenties te leveren waarvan wij denken dat ze u mogelijk interesseren, voor klantonderzoek, om u marketing- en promotionele e-mails te versturen en om u op de hoogte te houden van belangrijke wijzigingen in ons webportaal.",
+    "Zoals vereist door First Hair om zaken te doen en onze gerechtvaardigde belangen na te streven, met name:",
+    "Om ons webportaal en onze systemen te beveiligen en om fraude, beveiligingsincidenten en andere misdrijven te voorkomen",
+    "Om na te gaan of onze algemene voorwaarden worden nageleefd en om onze rechtsposittie te bepalen, uit te oefenen of te verdedigen",
+    "Om ons te helpen bij het monitoren, verbeteren en beschermen van ons webportaal, onze producten en diensten, en om ons webportaal, producten, diensten (en die van onze partners) voor u te personaliseren op basis van de informatie die u verstrekt en uw gebruik van ons webportaal, producten en diensten en andere websites (zie het Cookies-hoofdstuk van dit Privacybeleid voor meer informatie)",
+    "Om intern onderzoek en analyse uit te voeren, zodat we kunnen zien hoe ons webportaal en ons bedrijf presteert, en hoe onze producten en diensten worden gebruikt",
+    "Bij gebruiken van onze website gaat u mee akkord met bovenstande.",
+];

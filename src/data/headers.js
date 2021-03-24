@@ -32,3 +32,9 @@ export const HEADER_MAATREGELEN = {
     body: `Veiligheid is erg belangrijk in onze salons. Daarom nemen wij ook de nodige maatregelen om verspreiding van Covid 19 te voorkomen.`,
     url: "",
 };
+
+export const HEADER_COOKIES = {
+    title: "Privacy en cookie policy",
+    body: `Wij streven ernaar de privacy van onze gebruikers en klanten te beschermen.`,
+    url: "",
+};

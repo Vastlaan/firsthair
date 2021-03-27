@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { DateTime } from "luxon";
+import { useRouter } from "next/router";
 import { ContainerNarrow } from "../../../styles";
-import { validateEmail } from "../../../../validations";
 import Calendar from "./calendar";
 import PersonalData from "./personal_data";
 import Confirmation from "./confirmation";
+import Modal from "../../modals/successfullyMadeAppointment";
 
 export default function Form() {
     const [step, setStep] = useState(1);
@@ -14,14 +15,66 @@ export default function Form() {
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
     const [error, setError] = useState({});
+    const [existingAppointments, setExistingAppointments] = useState([]);
+    const [displayModal, setDisplayModal] = useState(false);
 
-    function makeAppointment(e) {
+    const router = useRouter();
+
+    async function makeAppointment(e) {
         e.preventDefault();
-        console.log(dt.day, dt.month, dt.year, hour);
 
-        // validate Email
-        const isEmailValid = validateEmail(email);
+        const dataToSend = {
+            time: hour,
+            day: dt.day,
+            month: dt.month,
+            year: dt.year,
+            name,
+            email,
+            phone,
+        };
+
+        const res = await fetch("/api/setAppointment", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(dataToSend),
+        });
+        const data = await res.json();
+
+        if (data.error) {
+            return setError(data.error);
+        }
+
+        // reset state and display modal
+        setStep(1);
+        setDt(DateTime.now());
+        setHour("");
+        setDisplayModal(true);
     }
+
+    function getAppointments() {
+        fetch("/api/getAppointments")
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.error) {
+                    console.error(data.error);
+                }
+                setExistingAppointments(data.appointments);
+            })
+            .catch((e) => {
+                console.error(e);
+            });
+    }
+
+    // function to trigger on modal's button click
+    function redirectToLandingPage() {
+        return router.push("/");
+    }
+
+    useEffect(() => {
+        getAppointments();
+    }, []);
 
     function renderComponent() {
         switch (step) {
@@ -32,6 +85,7 @@ export default function Form() {
                         dt={dt}
                         setDt={setDt}
                         setHour={setHour}
+                        existingAppointments={existingAppointments}
                     />
                 );
             case 2:
@@ -80,6 +134,13 @@ export default function Form() {
     return (
         <ContainerNarrow>
             <form onSubmit={makeAppointment}>{renderComponent()}</form>;
+            {displayModal && (
+                <Modal
+                    setModal={setDisplayModal}
+                    action={redirectToLandingPage}
+                    message="We hebben jouw verzoek in goede orde ontvangen! Je zult binnen enkele minuten bevestiging van je afspraak via e-mail ontvangen."
+                />
+            )}
         </ContainerNarrow>
     );
 }

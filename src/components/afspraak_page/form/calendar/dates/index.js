@@ -4,7 +4,14 @@ import Weekday from "./weekday";
 import Hours from "./hours";
 import { respond } from "../../../../../styles";
 
-export default function DatesComponent({ dt, span, setHour, setStep, setDt }) {
+export default function DatesComponent({
+    dt,
+    span,
+    setHour,
+    setStep,
+    setDt,
+    existingAppointments,
+}) {
     const iterations = [];
     for (let i = 1; i <= span; i++) {
         iterations.push(i);
@@ -18,6 +25,12 @@ export default function DatesComponent({ dt, span, setHour, setStep, setDt }) {
     return (
         <Grid>
             {iterations.map((i) => {
+                const appointmentsExist = existingAppointments.filter(
+                    (appointment) =>
+                        appointment.day === dt.plus({ day: i }).day &&
+                        appointment.month === dt.plus({ day: i }).month &&
+                        appointment.year === dt.plus({ day: i }).year
+                );
                 return (
                     <GridColumn key={`column-${i}`}>
                         <Day i={i} dt={dt} />
@@ -28,6 +41,7 @@ export default function DatesComponent({ dt, span, setHour, setStep, setDt }) {
                             i={i}
                             dt={dt}
                             selectDayAndHour={selectDayAndHour}
+                            appointmentsExist={appointmentsExist}
                         />
                     </GridColumn>
                 );

@@ -1,18 +1,33 @@
 import styled from "styled-components";
 import { fonts, respond } from "../../../../../styles";
-import { HOURS, HOURS_SAT } from "../../../../../utils/hours";
+import { HOURS, HOURS_SHORT } from "../../../../../utils/hours";
 
-export default function HoursComponent({ dt, i, selectDayAndHour }) {
+export default function HoursComponent({
+    dt,
+    i,
+    selectDayAndHour,
+    appointmentsExist,
+}) {
     if (dt.plus({ day: i }).weekday === 7) {
         return (
-            <HourField key={`hour-sunday}`}>
-                <p>X</p>
+            <HourField key={`hour-sunday}`} busy>
+                <p>dicht</p>
             </HourField>
         );
-    } else if (dt.plus({ day: i }).weekday === 6) {
+    } else if (dt.plus({ day: i }).weekday === 1) {
         return (
             <Hours>
-                {HOURS_SAT.map((h) => {
+                {HOURS_SHORT.map((h) => {
+                    if (
+                        appointmentsExist &&
+                        appointmentsExist.find((a) => a.time === h)
+                    ) {
+                        return (
+                            <HourField key={`hour-sunday}`} busy>
+                                <p>bezet</p>
+                            </HourField>
+                        );
+                    }
                     return (
                         <HourField
                             key={`hour-${h}`}
@@ -30,6 +45,16 @@ export default function HoursComponent({ dt, i, selectDayAndHour }) {
         return (
             <Hours>
                 {HOURS.map((h) => {
+                    if (
+                        appointmentsExist &&
+                        appointmentsExist.find((a) => a.time === h)
+                    ) {
+                        return (
+                            <HourField key={`hour-sunday}`} busy>
+                                <p>bezet</p>
+                            </HourField>
+                        );
+                    }
                     return (
                         <HourField
                             key={`hour-${h}`}
@@ -56,7 +81,7 @@ const HourField = styled.div`
     align-items: center;
     justify-content: center;
     border: 1px solid ${(p) => p.theme.black};
-    background-color: ${(p) => p.theme.primary};
+    background-color: ${(p) => (p.busy ? p.theme.secondary : p.theme.primary)};
     padding: 0.5rem;
     cursor: pointer;
     transition: all 0.3s;
@@ -74,7 +99,7 @@ const HourField = styled.div`
     p {
         font-size: 1.6rem;
         font-family: ${fonts.heading};
-        color: ${(p) => p.theme.black};
+        color: ${(p) => (p.busy ? p.theme.white : p.theme.black)};
         transition: all 0.3s;
     }
 `;

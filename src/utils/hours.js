@@ -17,7 +17,7 @@ export const HOURS = [
     "17:30",
 ];
 
-export const HOURS_SAT = [
+export const HOURS_SHORT = [
     "12:00",
     "12:30",
     "13:00",

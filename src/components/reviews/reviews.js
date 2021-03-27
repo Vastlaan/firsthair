@@ -42,6 +42,8 @@ export default function ReviewsComponent() {
                 duration: 1,
                 stagger: 0.3,
             });
+
+        return () => tl.kill();
     }, []);
 
     return (

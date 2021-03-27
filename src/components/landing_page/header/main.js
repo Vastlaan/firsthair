@@ -29,6 +29,8 @@ export default function MainComponent() {
                 duration: 1,
                 stagger: 0.3,
             });
+
+        return () => tl.kill();
     }, []);
 
     return (

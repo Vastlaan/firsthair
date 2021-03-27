@@ -3,7 +3,14 @@ import Navigation from "./navigation";
 import Dates from "./dates";
 import { Header4, FlexCol } from "../../../../styles";
 
-function DateComponent({ theme, setStep, dt, setDt, setHour }) {
+function DateComponent({
+    theme,
+    setStep,
+    dt,
+    setDt,
+    setHour,
+    existingAppointments,
+}) {
     const span = 7;
 
     return (
@@ -18,6 +25,7 @@ function DateComponent({ theme, setStep, dt, setDt, setHour }) {
                 span={span}
                 setStep={setStep}
                 setDt={setDt}
+                existingAppointments={existingAppointments}
             />
         </FlexCol>
     );

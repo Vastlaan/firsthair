@@ -1,10 +1,10 @@
 import Layout from "../src/layout";
-import Contact from "../src/components/contact_page";
+import Afspraak from "../src/components/afspraak_page";
 
 export default function AfspraakPage() {
     return (
         <Layout>
-            <Contact />
+            <Afspraak />
         </Layout>
     );
 }

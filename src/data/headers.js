@@ -38,3 +38,9 @@ export const HEADER_COOKIES = {
     body: `Wij streven ernaar de privacy van onze gebruikers en klanten te beschermen.`,
     url: "",
 };
+
+export const HEADER_AFSPRAAK = {
+    title: "Online Afspraak maken",
+    body: `U kunt zelf een afspraak in te plannen voor uw volgende bezoek. U kunt zelf een datum en tijd kiezen. Eenvoudig met een paar muisklikken geregeld!`,
+    url: "",
+};

@@ -9,7 +9,16 @@ import {
     FlexCol,
     BilboardContainer,
 } from "./containers";
-import { List, Photo, ImageStory, CustomLink, Logo } from "./components";
+import {
+    List,
+    Input,
+    Label,
+    Photo,
+    ImageStory,
+    CustomLink,
+    Logo,
+    Error,
+} from "./components";
 import {
     Header3,
     Header4,
@@ -40,10 +49,13 @@ export {
     BilboardContainer,
     // components
     Logo,
+    Input,
+    Label,
     List,
     Photo,
     ImageStory,
     CustomLink,
+    Error,
     // typography
     Header1,
     Header3,

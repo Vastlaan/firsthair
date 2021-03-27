@@ -2,6 +2,19 @@ import styled from "styled-components";
 import respond from "./respond";
 import { fonts } from "./fonts";
 
+export const Label = styled.label`
+    font-size: 1.9rem;
+    color: ${(p) => p.theme.black};
+`;
+export const Input = styled.input`
+    margin: ${(p) => (p.margin ? p.margin : "0")};
+    border: 1px solid ${(p) => p.theme.grey_2};
+    padding: 0.9rem 1.4rem;
+    width: 35rem;
+    font-size: 1.6rem;
+    color: ${(p) => p.theme.grey_3};
+`;
+
 export const Logo = styled.div`
     margin-right: auto;
     display: flex;
@@ -15,7 +28,7 @@ export const Logo = styled.div`
 `;
 
 export const List = styled.ul`
-    margin: 2.7rem auto;
+    margin: 2.7rem 1.4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -115,4 +128,9 @@ export const CustomLink = styled.div`
         line-height: 1.3;
         color: ${(p) => p.theme.grey_2};
     }
+`;
+export const Error = styled.p`
+    margin: 0 0 0.9rem 0;
+    font-size: 1.6rem;
+    color: #b71c1c;
 `;

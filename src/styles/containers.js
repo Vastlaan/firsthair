@@ -51,6 +51,7 @@ export const FlexRow = styled.div`
     align-items: ${(p) => (p.align ? p.align : "center")};
     justify-content: ${(p) => (p.justify ? p.justify : "center")};
     margin: ${(p) => (p.margin ? p.margin : "0")};
+    width: ${(p) => (p.fixedWidth ? p.fixedWidth : "auto")};
 `;
 export const BilboardContainer = styled.section`
     width: 100%;

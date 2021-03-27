@@ -41,7 +41,7 @@ export default function LinksComponent({ displayMenu, isMobile }) {
                     <p>0299 450 325</p>
                 </CustomLink>
             </a>
-            <Link href="/afspaak">
+            <Link href="/afspraak">
                 <Afspraak>Afspraak</Afspraak>
             </Link>
         </LinksList>

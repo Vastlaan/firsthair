@@ -1,14 +1,14 @@
 import styled, { withTheme } from "styled-components";
-import { respond, BigText, ButtonSecondary } from "../../styles";
+import { respond, BigText, ButtonSecondaryReverse } from "../../styles";
 
 function SuccessfullyMadeAppointment({ theme, message, action }) {
     return (
         <Modal>
             <ContentBox>
                 <BigText color={theme.grey_1}>{message}</BigText>
-                <ButtonSecondary margin="2.7rem auto" onClick={action}>
+                <ButtonSecondaryReverse margin="2.7rem auto" onClick={action}>
                     Prima
-                </ButtonSecondary>
+                </ButtonSecondaryReverse>
             </ContentBox>
         </Modal>
     );

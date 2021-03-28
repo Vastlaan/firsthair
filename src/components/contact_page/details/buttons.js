@@ -5,14 +5,14 @@ import { IoLocationOutline, IoCallOutline } from "react-icons/io5";
 export default function ButtonsComponent() {
     return (
         <ButtonsContainer>
-            <Button>
+            <Link href="https://www.google.com/maps/place/First+Hair/@52.5095632,4.944381,15z/data=!4m5!3m4!1s0x0:0x963c1c3b6fc280b3!8m2!3d52.5095632!4d4.944381">
                 <IoLocationOutline />
                 <p>Westerstraat 45, 1441 AR Purmerend</p>
-            </Button>
-            <Button>
+            </Link>
+            <Link href="tel:0299450325">
                 <IoCallOutline />
                 <p>0299 45 03 25</p>
-            </Button>
+            </Link>
         </ButtonsContainer>
     );
 }
@@ -27,7 +27,8 @@ const ButtonsContainer = styled.div`
     ${() => respond("m", "flex-direction: row;")}
 `;
 
-const Button = styled.button`
+const Link = styled.a`
+    text-decoration: none;
     margin: 1.4rem;
     min-width: 37rem;
     display: flex;

@@ -39,6 +39,15 @@ function ConfirmationComponent({
 
             <TextConfirmation>Telefoon: {phone}</TextConfirmation>
 
+            <FlexRow margin="2.7rem 0 0 0">
+                <Disclaimer>
+                    Door op de knop Bevestigen te klikken, bevestig ik dat ik
+                    geen symptomen heb die verband houden met coronavirus, zoals
+                    neusverkoudheid, hoesten, benauwdheid of koorts. Ook niemand
+                    van mijn gezin heeft afgelopen 14 dagen corona vastgesteld.
+                </Disclaimer>
+            </FlexRow>
+
             <FlexRow
                 margin="2.7rem 0 0 0"
                 justify="space-between"
@@ -61,5 +70,14 @@ const TextConfirmation = styled.p`
     color: ${(p) => p.theme.black};
     letter-spacing: 0.15rem;
     margin: 0.9rem auto;
+    text-align: center;
+`;
+
+const Disclaimer = styled.p`
+    font-size: 1.4rem;
+    font-family: ${fonts.heading};
+    color: ${(p) => p.theme.secondary};
+    letter-spacing: 0.15rem;
+    margin: 1.4rem auto 0.6rem auto;
     text-align: center;
 `;

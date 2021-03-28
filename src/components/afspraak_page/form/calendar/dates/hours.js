@@ -10,7 +10,7 @@ export default function HoursComponent({
 }) {
     if (dt.plus({ day: i }).weekday === 7) {
         return (
-            <HourField key={`hour-sunday}`} busy>
+            <HourField key={`hour-sunday`} busy>
                 <p>dicht</p>
             </HourField>
         );
@@ -19,25 +19,33 @@ export default function HoursComponent({
             <Hours>
                 {HOURS_SHORT.map((h) => {
                     if (
-                        appointmentsExist &&
+                        appointmentsExist.length > 0 &&
                         appointmentsExist.find((a) => a.time === h)
                     ) {
+                        const currentAppointment = appointmentsExist.find(
+                            (a) => a.time === h
+                        );
+
                         return (
-                            <HourField key={`hour-sunday}`} busy>
+                            <HourField
+                                key={`${currentAppointment.time}:${currentAppointment.day}`}
+                                busy
+                            >
                                 <p>bezet</p>
                             </HourField>
                         );
+                    } else {
+                        return (
+                            <HourField
+                                key={`hour-${h}`}
+                                onClick={() =>
+                                    selectDayAndHour(dt.plus({ day: i }), h)
+                                }
+                            >
+                                <p>{h}</p>
+                            </HourField>
+                        );
                     }
-                    return (
-                        <HourField
-                            key={`hour-${h}`}
-                            onClick={() =>
-                                selectDayAndHour(dt.plus({ day: i }), h)
-                            }
-                        >
-                            <p>{h}</p>
-                        </HourField>
-                    );
                 })}
             </Hours>
         );
@@ -46,11 +54,18 @@ export default function HoursComponent({
             <Hours>
                 {HOURS.map((h) => {
                     if (
-                        appointmentsExist &&
+                        appointmentsExist.length > 0 &&
                         appointmentsExist.find((a) => a.time === h)
                     ) {
+                        const currentAppointment = appointmentsExist.find(
+                            (a) => a.time === h
+                        );
+
                         return (
-                            <HourField key={`hour-sunday}`} busy>
+                            <HourField
+                                key={`${currentAppointment.time}-${currentAppointment.day}`}
+                                busy
+                            >
                                 <p>bezet</p>
                             </HourField>
                         );

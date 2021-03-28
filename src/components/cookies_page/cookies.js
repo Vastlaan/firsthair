@@ -17,9 +17,9 @@ function CookiesComponent({ theme }) {
                 de tijd om dit Privacybeleid zorgvuldig door te nemen.
             </Text>
             <List>
-                {data.map((rule) => {
+                {data.map((rule, i) => {
                     return (
-                        <li wide color={theme.grey_3}>
+                        <li key={i} color={theme.grey_3}>
                             {rule}
                         </li>
                     );

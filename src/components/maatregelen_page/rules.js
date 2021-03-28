@@ -8,9 +8,9 @@ function RulesComponent({ theme }) {
             <Header3 color={theme.black}>De Maatregelen</Header3>
             <Line />
             <List>
-                {data.map((rule) => {
+                {data.map((rule, i) => {
                     return (
-                        <li wide color={theme.grey_3}>
+                        <li key={i} color={theme.grey_3}>
                             {rule}
                         </li>
                     );

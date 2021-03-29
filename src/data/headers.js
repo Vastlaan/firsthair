@@ -16,7 +16,7 @@ export const HEADER_LANDING = {
 };
 
 export const HEADER_CONTACT = {
-    title: "Wij zijn je graag van diens",
+    title: "Wij zijn je graag van dienst",
     body: `Heb je een vraag voor ons? Neem gerust contact met een van onze medewerkers op via de onderstaande contactgegevens`,
     url: "",
 };

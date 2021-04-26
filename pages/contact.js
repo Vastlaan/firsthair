@@ -6,7 +6,7 @@ export default function ContactPage() {
     return (
         <Layout>
             <Head
-                title="Contact Ons - First Hair Kapsalon"
+                title="Contact Ons - Imperum Kapsalon"
                 description="Heb je een vraag voor ons? Neem gerust contact met een van onze medewerkers op via de onderstaande contactgegevens"
             />
             <Contact />

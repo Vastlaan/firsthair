@@ -7,11 +7,11 @@ export default function ButtonsComponent() {
         <ButtonsContainer>
             <Link href="https://www.google.com/maps/place/First+Hair/@52.5095632,4.944381,15z/data=!4m5!3m4!1s0x0:0x963c1c3b6fc280b3!8m2!3d52.5095632!4d4.944381">
                 <IoLocationOutline />
-                <p>Westerstraat 45, 1441 AR Purmerend</p>
+                <p>Westerstraat 435, 1442 AZ Purmerend</p>
             </Link>
             <Link href="tel:0299450325">
                 <IoCallOutline />
-                <p>0299 45 03 25</p>
+                <p>0299 324 325</p>
             </Link>
         </ButtonsContainer>
     );

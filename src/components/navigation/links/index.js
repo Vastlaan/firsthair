@@ -32,13 +32,13 @@ export default function LinksComponent({ displayMenu, isMobile }) {
             <a href="https://www.google.com/maps/place/First+Hair/@52.5095632,4.944381,15z/data=!4m5!3m4!1s0x0:0x963c1c3b6fc280b3!8m2!3d52.5095632!4d4.944381">
                 <CustomLink>
                     <IoLocationOutline />
-                    <p>Westerstraat 45, 1441 AR Purmerend</p>
+                    <p>Westerstraat 425, 1442 AZ Purmerend</p>
                 </CustomLink>
             </a>
             <a href="tel:0299450325">
                 <CustomLink>
                     <IoCallOutline />
-                    <p>0299 450 325</p>
+                    <p>0299 324 322</p>
                 </CustomLink>
             </a>
             <Link href="/afspraak">
